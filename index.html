@@ -1,0 +1,206 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <script src= "https://cdn.tailwindcss.com"></script> 
+    <link href="https://fonts.cdnfonts.com/css/playfair-display" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Playfair Display', sans-serif;
+        }
+        .animation {
+            height:80px;
+            overflow:hidden;
+            margin-left: 1rem;
+        }
+        .animation > div > div {
+            padding: 0.25rem 0.75rem;
+            height:2.81rem;
+            margin-bottom: 2.81rem;
+            display:inline-block;
+        }
+        .animation div:first-child {
+            animation: text-animation 8s infinite;
+        }
+        @keyframes text-animation {
+            0% {margin-top: 0;}
+            10% {margin-top: 0;}
+            20% {margin-top: -5.62rem;}
+            30% {margin-top: -5.62rem;}
+            40% {margin-top: -11.24rem;}
+            60% {margin-top: -11.24rem;}
+            70% {margin-top: -5.62rem;}
+            80% {margin-top: -5.62rem;}
+            90% {margin-top: 0;}
+            100% {margin-top: 0;}
+        }
+    </style>
+
+</head> 
+<body> 
+    <!-- https://websitedemos.net/fiona-patisserie-04/ -->
+    <section class="header bg-cover bg-fixed bg-no-repeat" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/bg-02.png)">
+        <div class="flex flex-row h-screen" >
+                <div class="container mx-auto p-8">
+                    <div class="bg-cover bg-center h-full" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/product-02.png)"></div>
+                </div>
+                <div class="container mx-auto absolute inset-0 p-5">
+                <div class="flex-row h-16 flex place-content-center justify-center gap-8">
+                    <div class="py-5 font-light tracking-wide text-xl text-gray-600 hover:font-semibold hover:text-slate-700 border-b-2 border-transparent hover:border-slate-700">Home</div>
+                    <div class="py-5 font-light tracking-wide text-xl text-gray-600 hover:font-semibold hover:text-slate-700 border-b-2 border-transparent hover:border-slate-700">Our Menu</div>
+                    <div class="">
+                        <div class="w-20 h-20 bg-contain bg-center bg-no-repeat" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/logo-retina-1.png)"></div>
+                    </div>
+                    <div class="py-5 font-light tracking-wide text-xl text-gray-600 hover:font-semibold hover:text-slate-700 border-b-2 border-transparent hover:border-slate-700">Contact</div>
+                    <div class="py-5 font-light tracking-wide text-xl text-gray-600 hover:font-semibold hover:text-slate-700 border-b-2 border-transparent hover:border-slate-700">Our Menu</div>
+                </div>
+        </div>
+        </section>
+    <section class="testimonial p-8">
+        <div class="w-full p-10">
+            <div class="flex flex-col p-8 gap-4">
+                <div class="text-7xl text-gray-600">SOME REVIEWS FROM</div>
+                <div class="text-4xl text-gray-800">Our happy clients</div>
+            </div>
+        </div>
+        <!-- This is an example component -->
+        <div class="w-full p-10">
+            <div class="flex sm:flex-col lg:flex-row gap-4 justify-around p-8">
+                <div id="testimoni">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <p class="mt-5 font-light italic text-xl text-gray-600">This rating component is part of a larger, open-source library of Tailwind CSS components. Learn
+                        more by going to the official <a class="text-blue-600 hover:underline"
+                            href="#" target="_blank">Flowbite
+                            Documentation</a>.
+                    </p>
+                    <p class="mt-5 font-light">Jhon Doe</p>
+                </div>
+                <div id="testimoni">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <p class="mt-5 font-light italic text-xl text-gray-600">This rating component is part of a larger, open-source library of Tailwind CSS components. Learn
+                        more by going to the official <a class="text-blue-600 hover:underline"
+                            href="#" target="_blank">Flowbite
+                            Documentation</a>.
+                    </p>
+                    <p class="mt-5 font-light">Jhon Doe</p>
+                </div>
+                <div id="testimoni">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <p class="mt-5 font-light italic text-xl text-gray-600">This rating component is part of a larger, open-source library of Tailwind CSS components. Learn
+                        more by going to the official <a class="text-blue-600 hover:underline"
+                            href="#" target="_blank">Flowbite
+                            Documentation</a>.
+                    </p>
+                    <p class="mt-5 font-light">Jhon Doe</p>
+                </div>
+                </div>
+            </div>
+            </div>
+    </section>
+    <section class="vision">
+        <div class="flex flex-col justify-center place-content-center w-full h-screen bg-cover bg-fixed bg-no-repeat" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/bg-02.png)">
+            <div class="right-image bg-cover absolute w-full h-full" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/bg-05.png)"></div>
+            <div class="z-10 flex flex-col">
+                <div class="text-4xl text-center font-light tracking-wide text-gray-600">Always</div>
+                <div class="animation text-7xl text-center font-light tracking-wide text-gray-700">
+                    <div class="first">
+                        <div>Carlos Córdova</div>
+                    </div>
+                    <div class="second">
+                        <div>Web Developer</div>
+                    </div>
+                    <div class="third">
+                        <div>Systems Engineer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body> 
+</html>
