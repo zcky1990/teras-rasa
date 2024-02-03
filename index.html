@@ -9,7 +9,6 @@
     <style>
         body{
             font-family: 'Playfair Display', sans-serif;
-            background-color:whitesmoke;
         }
         .animation {
             height:80px;
@@ -42,45 +41,48 @@
 </head> 
 <body> 
     <!-- https://websitedemos.net/fiona-patisserie-04/ -->
-    <section name="header" class="h-screen bg-cover bg-fixed bg-no-repeat" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/bg-02.png)">
-        <div class="flex flex-row h-full">
-            <div class="w-full md:p-8 lg:p-8 xl:p-8 2xl:p-8">
-                <div class="bg-auto xl:bg-cover 2xl:bg-cover bg-center bg-no-repeat h-full" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/product-02.png)"></div>
-            </div>
-            <div class="container mx-auto absolute inset-0 p-2 md:p-5 lg:p-5 xl:p-5 2xl:p-5">
-                <div class="flex flex-row h-16 place-content-center justify-center">
-                    <div class="basis-1/3 md:basis-2/6 lg:basis-2/6 xl:basis-2/6  2xl:basis-2/6 flex flex-row  gap-4 md:gap-8 lg:gap-8 xl:gap-8 2xl:gap-8">
-                        <div class="basis-1/2 grow-1 text-center 2xl:basis-0 text-sm text-gray py-5 font-light tracking-wide md:text-xl lg:text-xl xl:text-xl 2xl:text-xl  hover:font-semibold hover:text-slate-700 border-b-2 border-transparent hover:border-slate-700">Home</div>
-                        <div class="basis-1/2 grow-1 text-center 2xl:basis-0 text-sm text-gray py-5 font-light tracking-wide md:text-xl lg:text-xl xl:text-xl 2xl:text-xl  hover:font-semibold hover:text-slate-700 border-b-2 border-transparent hover:border-slate-700">Our Menu</div>
+    <section class="header relative h-96 md:h-screen lg:h-screen xl:h-screen 2xl:h-screen">
+            <hero class="relative h-full flex bg-cover bg-fixed bg-no-repeat" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/bg-02.png)">
+                <div class="flex flex-row h-full">
+                    <div class="absolute inset-0 w-full md:p-8 lg:p-8 xl:p-8 2xl:p-8">
+                        <div class="bg-contain bg-center bg-no-repeat h-full mg:bg-cover lg:bg-cover xl:bg-cover 2xl:bg-cover " style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/product-02.png)"></div>
                     </div>
-                    <div class="basis-1/3 md:basis-1/6 lg:basis-1/6 xl:basis-1/6  2xl:basis-1/6 flex flex-col place-content-center justify-center items-center sm:px-2">
-                        <div class="w-20 h-20 bg-contain bg-center bg-no-repeat" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/logo-retina-1.png)"></div>
-                    </div>
-                    <div class="basis-1/3 md:basis-2/6 lg:basis-2/6 xl:basis-2/6  2xl:basis-2/6 flex flex-row  gap-4 md:gap-8 lg:gap-8 xl:gap-8 2xl:gap-8">
-                        <div class="basis-1/2 text-center text-sm text-gray py-5 font-light tracking-wide md:text-xl lg:text-xl xl:text-xl 2xl:text-xl  hover:font-semibold hover:text-slate-700 border-b-2 border-transparent hover:border-slate-700">Contact</div>
-                        <div class="basis-1/2 text-center text-sm text-gray py-5 font-light tracking-wide md:text-xl lg:text-xl xl:text-xl 2xl:text-xl  hover:font-semibold hover:text-slate-700 border-b-2 border-transparent hover:border-slate-700">Our Menu</div>
+                    
+                </div>
+            </hero>
+            <header class="absolute inset-0">
+                <div class="container mx-auto p-2 md:p-5 lg:p-5 xl:p-5 2xl:p-5">
+                    <div class="flex flex-row h-16 place-content-center justify-center">
+                        <div class="flex flex-row basis-1/3 md:basis-2/6 lg:basis-2/6 xl:basis-2/6  2xl:basis-2/6">
+                            <div class="basis-1/2 grow-1 text-center 2xl:basis-0 text-sm text-gray py-5 font-light tracking-wide md:text-xl lg:text-xl xl:text-xl 2xl:text-xl  hover:font-semibold hover:text-slate-700 border-b-2 border-transparent hover:border-slate-700">Home</div>
+                            <div class="basis-1/2 grow-1 text-center 2xl:basis-0 text-sm text-gray py-5 font-light tracking-wide md:text-xl lg:text-xl xl:text-xl 2xl:text-xl  hover:font-semibold hover:text-slate-700 border-b-2 border-transparent hover:border-slate-700">Our Menu</div>
+                        </div>
+                        <div class="flex flex-col place-content-center justify-center items-center basis-1/3 md:basis-1/6 lg:basis-1/6 xl:basis-1/6  2xl:basis-1/6  sm:px-2">
+                            <div class="w-20 h-20 bg-contain bg-center bg-no-repeat" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/logo-retina-1.png)"></div>
+                        </div>
+                        <div class="flex flex-row basis-1/3 md:basis-2/6 lg:basis-2/6 xl:basis-2/6  2xl:basis-2/6">
+                            <div class="basis-1/2 text-center text-sm text-gray py-5 font-light tracking-wide md:text-xl lg:text-xl xl:text-xl 2xl:text-xl  hover:font-semibold hover:text-slate-700 border-b-2 border-transparent hover:border-slate-700">Contact</div>
+                            <div class="basis-1/2 text-center text-sm text-gray py-5 font-light tracking-wide md:text-xl lg:text-xl xl:text-xl 2xl:text-xl  hover:font-semibold hover:text-slate-700 border-b-2 border-transparent hover:border-slate-700">Our Menu</div>
+                        </div>
                     </div>
                 </div>
+            </header>
+    </section>
+    <section name="welcome h-96">
+        <div class="container mx-auto h-96 md:h-screen lg:h-screen xl:h-screen 2xl:h-screen ">
+            <div class="container h-full p-4 flex flex-col gap-4 md:gap-8 lg:gap-8 xl:gap-8 2xl:gap-8 place-content-center justify-center">
+                    <div class="font-light tracking-wide text-xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl">Welcome to our</div>
+                    <div class="font-light tracking-wide text-4xl md:text-7xl lg:text-7xl xl:text-7xl 2xl:text-7xl">PATISSERIE</div>
+                    <div class="font-light tracking-wide text-xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl">Hey there, I'm Fiona Cornelis, a French baker from Brussels, Belgium. I own my own bakery where I lorem ipsum dolor sit amet. Proin semper pellentesque sapien sit amet pretium phasellus sit.</div>
             </div>
         </div>
     </section>
-    
-    <section name="welcome" class="w-full">
-        <div class="container mx-auto">
-            <div class="flex flex-col text-center p-10 gap-8">
-                <div class="pt-10 font-light tracking-wide text-xl">Welcome to our</div>
-                <div class="text-7xl tracking-wide">PATISSERIE</div>
-                <div class="pb-10 font-light tracking-wide text-3xl">Hey there, I'm Fiona Cornelis, a French baker from Brussels, Belgium. I own my own bakery where I lorem ipsum dolor sit amet. Proin semper pellentesque sapien sit amet pretium phasellus sit.</div>
-            </div>
-        </div>
-    </section>
-    <!--
-    <section class="vision">
-        <div class="flex flex-col justify-center place-content-center w-full h-screen bg-cover bg-fixed bg-no-repeat" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/bg-02.png)">
-            <div class="right-image bg-cover absolute w-full h-full" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/bg-05.png)"></div>
+    <section class="vision h-96 md:h-screen lg:h-screen xl:h-screen 2xl:h-screen">
+        <div class="relative flex flex-col justify-center place-content-center w-full h-full bg-cover bg-fixed bg-no-repeat" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/bg-02.png)">
+            <div class="right-image  absolute w-full h-full bg-contain md:bg-cover lg:bg-cover xl:bg-cover 2xl:bg-cover" style="background-image: url(https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/bg-05.png)"></div>
             <div class="z-10 flex flex-col">
-                <div class="text-4xl text-center font-light tracking-wide text-gray-600">Always</div>
-                <div class="animation text-7xl text-center font-light tracking-wide text-gray-700">
+                <div class=" text-center font-light tracking-wide text-gray-600 text-2xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl">Always</div>
+                <div class="animation  text-center font-light tracking-wide text-gray-700 text-4xl md:text-7xl lg:text-7xl xl:text-7xl 2xl:text-7xl">
                     <div class="first">
                         <div>Carlos Córdova</div>
                     </div>
@@ -94,6 +96,7 @@
             </div>
         </div>
     </section>
+    <!--
 
     <section class="testimonial p-8">
         <div class="w-full p-10">
