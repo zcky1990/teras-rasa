@@ -7,6 +7,8 @@
     <script src= "https://cdn.tailwindcss.com"></script> 
     <link href="https://fonts.cdnfonts.com/css/playfair-display" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/great-vibes" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <style>
         body{
             font-family: 'Playfair Display', sans-serif;
@@ -54,6 +56,7 @@
             90% {margin-top: 0;}
             100% {margin-top: 0;}
         }
+        #map { height: 400px; }
     </style>
     <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -76,6 +79,15 @@
                 }, 600 );
                 return false;
             });   
+
+            var map = L.map('map').setView([-6.2532805, 107.1564438], 16);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            var marker = L.marker([-6.2532805, 107.1564438]).addTo(map);
+            marker.bindPopup("<b>Google Maps</b><br/><a href='https://www.google.com/maps?q=-6.2532805, 107.1564438' target='_blank'>Open in Google Maps</a>").openPopup();
         });
     </script>
 
@@ -91,7 +103,7 @@
                     
                 </div>
             </hero>
-            <header class="fixed inset-0 z-30 ">
+            <header class="fixed inset-0 z-30 h-20 ">
                 <div class="mx-auto bg-white shadow-sm ">
                     <div class="flex flex-row justify-center h-16 px-2 place-content-center">
                         <div class="flex flex-row basis-1/3 md:basis-2/6 lg:basis-2/6 xl:basis-2/6 2xl:basis-2/6">
@@ -103,7 +115,7 @@
                         </div>
                         <div class="flex flex-row basis-1/3 md:basis-2/6 lg:basis-2/6 xl:basis-2/6 2xl:basis-2/6">
                             <div class="py-5 text-sm font-light tracking-wide text-center text-gray-600 border-b-2 border-transparent basis-1/2 md:text-xl lg:text-xl xl:text-xl 2xl:text-xl text-pattiseri boder-pattiseri">Gallery</div>
-                            <div class="py-5 text-sm font-light tracking-wide text-center text-gray-600 border-b-2 border-transparent basis-1/2 md:text-xl lg:text-xl xl:text-xl 2xl:text-xl text-pattiseri boder-pattiseri">Contact</div>
+                            <div scroll-trigger="contact" class="py-5 text-sm font-light tracking-wide text-center text-gray-600 border-b-2 border-transparent basis-1/2 md:text-xl lg:text-xl xl:text-xl 2xl:text-xl text-pattiseri boder-pattiseri">Contact</div>
                         </div>
                     </div>
                 </div>
@@ -118,27 +130,15 @@
             </div>
         </div>
     </section>
-    <section scroll-target="menu" name="welcome h-96 md:h-1/2 lg:h-1/2 xl:h-1/2 2xl:h-1/2 bg-fixed bg-no-repeat bg-cover" >
+    <section scroll-target="menu" name="menu bg-fixed bg-no-repeat bg-cover" style="background-image: url(./image/bg-02.png)">
         <div class="container h-full mx-auto ">
             <div class="container flex flex-col items-center justify-center h-full p-4 md:gap-4 lg:gap-4 xl:gap-4 2xl:gap-4 place-content-center">
                 <div class="w-20 h-20 bg-center bg-no-repeat bg-contain mt-14" style="background-image: url(./image/logo-retina-1.png)"></div>
-                <div class="text-xl font-light tracking-wide text-pattiseri font-vibes md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl">Have a look at</div>
+                <div class="text-2xl font-light tracking-wide text-pattiseri font-vibes md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl">Have a look at</div>
                 <div class="text-2xl font-light tracking-wide md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl">Our Menu</div>
-                <div class="container mx-auto gap-6 mt-8 flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row">
-                    <div class="flex flex-row items-center gap-4 mx-auto place-content-center md:basis-2/4 lg:basis-2/4 xl:basis-2/4 2xl:basis-2/4">
-                        <div class="w-20 h-20 bg-center bg-no-repeat bg-contain border-2 border-gray rounded-full" style="background-image: url(./image/logo-retina-1.png)"></div>
-                        <div class="flex flex-col justify-start  place-content-center">
-                            <div class="text-2xl font-light">Mie Ayam</div>
-                            <div class="text-sm font-light">Rp. 3000</div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row items-center gap-4 mx-auto place-content-center md:basis-2/4 lg:basis-2/4 xl:basis-2/4 2xl:basis-2/4">
-                        <div class="w-20 h-20 bg-center bg-no-repeat bg-contain border-2 border-gray rounded-full" style="background-image: url(./image/logo-retina-1.png)"></div>
-                        <div class="flex flex-col justify-start  place-content-center">
-                            <div class="text-2xl font-light">Mie Ayam</div>
-                            <div class="text-sm font-light">Rp. 3000</div>
-                        </div>
-                    </div>
+                <div class="container mx-auto mt-2">
+                    <div class="text-2xl tracking-wide text-pattiseri font-vibes md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl">Food</div>
+                    <hr class="h-0.5 w-full border-t-0 bg-gray-300 opacity-100 dark:opacity-50" />
                 </div>
                 <div class="container mx-auto gap-6 mt-8 flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row">
                     <div class="flex flex-row items-center gap-4 mx-auto place-content-center md:basis-2/4 lg:basis-2/4 xl:basis-2/4 2xl:basis-2/4">
@@ -172,7 +172,60 @@
                         </div>
                     </div>
                 </div>
-                    
+                <div class="container mx-auto gap-6 mt-8 flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row">
+                    <div class="flex flex-row items-center gap-4 mx-auto place-content-center md:basis-2/4 lg:basis-2/4 xl:basis-2/4 2xl:basis-2/4">
+                        <div class="w-20 h-20 bg-center bg-no-repeat bg-contain border-2 border-gray rounded-full" style="background-image: url(./image/logo-retina-1.png)"></div>
+                        <div class="flex flex-col justify-start  place-content-center">
+                            <div class="text-2xl font-light">Mie Ayam</div>
+                            <div class="text-sm font-light">Rp. 3000</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center gap-4 mx-auto place-content-center md:basis-2/4 lg:basis-2/4 xl:basis-2/4 2xl:basis-2/4">
+                        <div class="w-20 h-20 bg-center bg-no-repeat bg-contain border-2 border-gray rounded-full" style="background-image: url(./image/logo-retina-1.png)"></div>
+                        <div class="flex flex-col justify-start  place-content-center">
+                            <div class="text-2xl font-light">Mie Ayam</div>
+                            <div class="text-sm font-light">Rp. 3000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mx-auto mt-2">
+                    <div class="text-2xl tracking-wide text-pattiseri font-vibes md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl">Drinks</div>
+                    <hr class="h-0.5 w-full border-t-0 bg-gray-300 opacity-100 dark:opacity-50" />
+                </div>
+                <div class="container mx-auto gap-6 mt-8 flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row">
+                    <div class="flex flex-row items-center gap-4 mx-auto place-content-center md:basis-2/4 lg:basis-2/4 xl:basis-2/4 2xl:basis-2/4">
+                        <div class="w-20 h-20 bg-center bg-no-repeat bg-contain border-2 border-gray rounded-full" style="background-image: url(./image/logo-retina-1.png)"></div>
+                        <div class="flex flex-col justify-start  place-content-center">
+                            <div class="text-2xl font-light">Mie Ayam</div>
+                            <div class="text-sm font-light">Rp. 3000</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center gap-4 mx-auto place-content-center md:basis-2/4 lg:basis-2/4 xl:basis-2/4 2xl:basis-2/4">
+                        <div class="w-20 h-20 bg-center bg-no-repeat bg-contain border-2 border-gray rounded-full" style="background-image: url(./image/logo-retina-1.png)"></div>
+                        <div class="flex flex-col justify-start  place-content-center">
+                            <div class="text-2xl font-light">Mie Ayam</div>
+                            <div class="text-sm font-light">Rp. 3000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mx-auto gap-6 mt-8 flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row">
+                    <div class="flex flex-row items-center gap-4 mx-auto place-content-center md:basis-2/4 lg:basis-2/4 xl:basis-2/4 2xl:basis-2/4">
+                        <div class="w-20 h-20 bg-center bg-no-repeat bg-contain border-2 border-gray rounded-full" style="background-image: url(./image/logo-retina-1.png)"></div>
+                        <div class="flex flex-col justify-start  place-content-center">
+                            <div class="text-2xl font-light">Mie Ayam</div>
+                            <div class="text-sm font-light">Rp. 3000</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center gap-4 mx-auto place-content-center md:basis-2/4 lg:basis-2/4 xl:basis-2/4 2xl:basis-2/4">
+                        <div class="w-20 h-20 bg-center bg-no-repeat bg-contain border-2 border-gray rounded-full" style="background-image: url(./image/logo-retina-1.png)"></div>
+                        <div class="flex flex-col justify-start  place-content-center">
+                            <div class="text-2xl font-light">Mie Ayam</div>
+                            <div class="text-sm font-light">Rp. 3000</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 bg-center bg-no-repeat bg-contain mb-14" style="background-image: url(./image/logo-retina-1.png)"></div>
             </div>
         </div>
     </section>
@@ -320,11 +373,14 @@
             </div>
             </div>
     </section>
-    <section name="welcome h-96 md:h-1/2 lg:h-1/2 xl:h-1/2 2xl:h-1/2 bg-fixed bg-no-repeat bg-cover" style="background-image: url(./image/bg-02.png)">
+    <section scroll-target="contact" name="welcome h-96 md:h-1/2 lg:h-1/2 xl:h-1/2 2xl:h-1/2 bg-fixed bg-no-repeat bg-cover" style="background-image: url(./image/bg-02.png)">
         <div class="container h-full mx-auto ">
             <div class="container flex flex-col items-center justify-center h-full gap-2 p-4 md:gap-4 lg:gap-4 xl:gap-4 2xl:gap-4 place-content-center">
                 <div class="w-20 h-20 bg-center bg-no-repeat bg-contain" style="background-image: url(./image/logo-retina-1.png)"></div>
-                    <div class="text-xl font-light tracking-wide text-pattiseri font-vibes md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl">Where to find US</div>
+                    <div class="text-2xl font-light tracking-wide text-pattiseri font-vibes md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl">Where to find US</div>
+                    <div class="container h-full mx-auto">
+                        <div id="map"></div>
+                    </div>
                     <div class="flex flex-row items-center mx-auto place-content-center">
                         <div class="flex items-center justify-center w-20 h-20">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
